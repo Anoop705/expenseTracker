@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins;
+}
+h2 {
+        margin-top: 30px;
+}
+/* body{
+            height: 100vh;
+            width: auto;
+        } */
+.container {
+        margin: auto;
+        margin-top: 30px;
+        width: 60%;
+        height: auto;
+        border: 2px solid black;
+}
+p {
+        font-weight: bold;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+li{
+    list-style-type: none;
+}
+    </style>
+    
+</head>
+<body>
+    <center><h2>Expense Tracker</h2></center>
+    <div class="container">
+    <p>Your Balance</p>
+    <div><h1 id="balance">&#8377 0.00</h1></div>
+    <div class="main">
+        <div ><h2>income</h2><h3 id="income">&#8377 0.00</h3></div>
+        <div ><h2>expense</h2><h3 id="expense">&#8377 0.00</h3></div>
+    </div>
+    <div class="history">
+        <p>History</p>
+        <ul id="list">
+            <li class="minus"> Cash <span>&#8377 400</span> <button class="del-btn">x</button></li>
+        </ul>
+    </div>
+    <div class="newTransaction">
+        <p>Add a new transaction</p>
+        <form action="#" id = "form">
+        <label for="description">Text <br> <input type="text" id="description"/></label>
+        <br />
+        <label for="amount"
+        >Amount <br />(negative: -expense, positive: income) <br /><input
+            type="number"
+            id="amount"
+        />
+        </label><br>
+        <button type="submit" id="add" onclick="addTransaction">Add transaction</button>
+    </form>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
